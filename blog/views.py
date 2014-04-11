@@ -5,5 +5,8 @@ from django.shortcuts import render
 def index(request):
 	return HttpResponse("posts go here")
 
+def new_user(request):
+	return HttpResponse("Create a new user here")
+
 def login(request):
 	return HttpResponse("This is a login page")
