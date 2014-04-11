@@ -5,8 +5,8 @@ from blog import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$', views.login, name='login'),
-	url(r'^newuser/$', views.new_user, name='new_user'),
- 	url(r'^blog/', include('blog.urls')),
- 	url(r'^admin/', include(admin.site.urls)),
+	url(r'^$', views.login, namespace='login'),
+	url(r'^newuser/$', views.new_user, namespace='new_user'),
+ 	url(r'^blog/', include('blog.urls'), namespace = 'blog'),
+ 	url(r'^admin/', include(admin.site.urls), namespace = 'admin'),
 )
