@@ -1,4 +1,8 @@
 blogr.sublime-project
 blogr.sublime-workspace
+<<<<<<< HEAD
 
+=======
+*.DS_Store
+>>>>>>> 24454ca01677045fc10cf15f7315adf2660f9ffb
 *.pyc
