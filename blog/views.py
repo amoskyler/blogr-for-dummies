@@ -1,12 +1,15 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.models import User
 
 # Create your views here.
-def index(request):
-	return HttpResponse("posts go here")
+def profile(request, user_name):
+	user = get_object_or_404(User, username=user_name)
+	message = user_name + "'s posts"
+	return HttpResponse(message)
 
-def new_user(request):
-	return HttpResponse("Create a new user here")
+def register(request):
+	return HttpResponse("Register here")
 
 def login(request):
 	return HttpResponse("This is a login page")
